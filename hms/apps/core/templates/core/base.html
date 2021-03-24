@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles/css/bootstrap.min.css' %}">
+    <script src="{% static 'scripts/js/bootstrap.bundle.min.js' %}"></script>
+</head>
+<body>
+<nav class="navbar navbar-dark" style="background-color: #198754;">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Hostel Booking MIS System</span>
+    </div>
+</nav>
+<div class="container">
+    <!-- messages-->
+<div class="mt-2 pt-2">
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{message.tags}} alert-dismissable fade show" role="alert">
+        {{message}}
+        <button class="close" type="button" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+</div>
+<!-- messages-->
+    {% block content %}
+    {% endblock %}
+</div>
+<nav class="navbar navbar-dark" style="background-color: #198754;">
+    <div class="container-fluid">
+        <span class="navbar-brand mb-0 h1">Hostel Management System Footer</span>
+    </div>
+</nav>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+                <h1 class="my-4">Thank you {{request.user.username}} for signing up for an account!</h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}

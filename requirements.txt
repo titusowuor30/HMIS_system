@@ -1,0 +1,6 @@
+django
+paypal
+django-crispy-forms
+Pillow
+psycopg2
+six

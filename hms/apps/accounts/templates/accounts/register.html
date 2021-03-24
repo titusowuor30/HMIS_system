@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="card mt-5">
+            <div class="card-body">
+              <div class="box">
+                  <p>Welcome to our <b>online house booking website</b>. We currently avail to you all possible rental houses and hostels around Maseno Town
+                      <br>for renting and booking by just following a few steps online.</p>
+                  <p>
+                      If you are a student looking for a house or room to rent through our website then kindly spare a minute to fill up our
+                      <a href="{% url 'student_signup' %}">student signup</a> form online. If you are a guest in Maseno Town and is wishing to book a room for the duration of your stay in the Town,kindly signup for a free
+                      <a href="{% url 'guest_signup' %}">Guest Account</a> and find yourself a room of your choice without much struggle.
+                  </p>
+                  <p>
+                  For rental hostel/house owners Owners looking to advertise their rental houses/hostels through our platform,we are glad to inform you that we offer the best website for you to do so. Our website incorporates
+                      a house-rating/hostel-rating system that will influence clients looking for rooms to rent positively depending on the level of services you offer to your tenants. All you need to do is signup for a
+                      <a href="{% url 'manager_signup' %}">Hostel Owner Free Account</a> and enjoy all our services at the convenience of your phone or computer.
+                  </p>
+              </div>
+                    </div>
+            </div>
+            <div class="card-footer">
+                <strong>Already have an account? <a href="{% url 'login' %}" class="card-link">Login</a></strong>
+            </div>
+          </div>
+    </div>
+{% endblock %}
